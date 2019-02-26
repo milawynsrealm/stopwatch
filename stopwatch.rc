@@ -1,0 +1,55 @@
+/*
+    A simple stopwatch application
+    Copyright (C) 2014  Lee Schroeder
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+#include <windows.h>
+
+#include "resource.h"
+
+#include "lang/en-US.rc"
+
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+
+#define ENGINE_NAME_STR "Simple Stopwatch Application\0"
+#define ENGINE_VER 0,0,1,0
+#define ENGINE_VER_STR "0.0.1\0"
+
+/* The version resource itself */
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION     ENGINE_VER
+PRODUCTVERSION  ENGINE_VER
+FILEFLAGSMASK   VS_FFI_FILEFLAGSMASK
+FILEOS          VOS__WINDOWS32
+FILETYPE        VFT_APP
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904E4"
+        BEGIN
+            VALUE "Comments",          "\0"
+            VALUE "CompanyName",       "Lee Schroeder\0"
+            VALUE "FileDescription",   ENGINE_NAME_STR
+            VALUE "FileVersion",       ENGINE_VER_STR
+            VALUE "InternalName",      "engine\0"
+            VALUE "LegalCopyright",    "GNU GPL 3.0\0"
+            VALUE "OriginalFilename",  "engine.exe\0"
+            VALUE "ProductName",       ENGINE_NAME_STR
+            VALUE "ProductVersion",    ENGINE_VER_STR
+        END
+    END
+END
+
+//IDI_ICON ICON "res/stopwatch.ico"
